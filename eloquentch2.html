@@ -16,13 +16,22 @@
             }
             document.write("<br>");
         }
-        /*document.write("#<br>");
-        document.write("##<br>");
-        document.write("###<br>");
-        document.write("####<br>");
-        document.write("#####<br>");
-        document.write("######<br>");
-        */    
+        
+        document.write("<br>");
+        
+        for(var count = 1; count <= 100; count++){
+            if(count % 3 === 0 && count % 5 === 0){
+                document.write("FizzBuzz");
+                document.write("<br>");
+            } else if (count % 3 === 0){
+                
+                    document.write("Buzz");
+                    document.write("<br>");
+                } else {
+                    document.write(count);
+                    document.write("<br>");
+                }
+            }
         </script>
     
     
