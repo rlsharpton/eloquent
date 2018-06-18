@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>More javascript practice</title>
+    </head>
+
+    <body>
+    <h1>This is some text.</h1>
+    
+    <script>
+    var square = function(x) {
+        return x * x;
+    }
+    
+    console.log(square(12));
+        
+    function sayHello() {
+        console.log("hello")
+    }
+        
+    sayHello();
+        
+    function sayHellotoRobin() {
+        console.log("hello, Robin")
+    }
+    
+    function sayHellotoBrenda() {
+        console.log("hello, Brenda")
+    }
+        
+    function sayHellotoJill() {
+        console.log("hello, Jill")
+    }
+        
+    sayHellotoRobin();
+    sayHellotoBrenda();
+    sayHellotoJill();
+        
+    function say(greeting, firstName) {
+        console.log(`${greeting}, hello, ${firstName}!`)
+    }
+    say("julio", "hello");
+    var firstNameTwo = "";    
+    function nowBoth(firstNameTwo) {
+        //console.log("We are calling nowBoth");
+        return `Hello, ${firstNameTwo}`;
+    }
+        
+    nowBoth("Lee");
+    
+    </script>
+    </body>
+</html>
