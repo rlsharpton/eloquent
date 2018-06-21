@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>More javascript practice</title>
+    </head>
+
+    <body>
+    <h1>This is some text.</h1>
+    
+    <script>
+    function message() {
+        var sentance = 'Bird is the word.';
+        console.log(sentance);
+    }
+    message();
+    //console.log(sentance);
+        
+    volume = 10; // By declaring it this way it is global
+        
+    function returnEleven() {
+        var volume = 11; //This declares a variable inside a function
+        // using var so it is local to the function if I return volume
+        // here it will be what ever I have set it in here
+        return volume;
+    }
+    
+    returnEleven(); // this will return what is inside returnEleven because it decalred the 
+        //variable using var
+    volume; // This is unchanged from the original defenition above
+    function goToTwelve() {
+        volume = 12; // This will overwrite volume since it does not use var
+        return volume; // This will return 12
+    }
+        
+    goToTwelve();
+    volume; // the global variable go overwritten inside goToTwelve
+    
+        // Global definition of aCentaur.  
+var aCentaur = "a horse with rider,";  
+
+// A local aCentaur variable is declared in this function.  
+function antiquities(){  
+
+   var aCentaur = "A centaur is probably a mounted Scythian warrior";  
+}  
+
+antiquities();  
+aCentaur += " as seen from a distance by a naive innocent.";  
+
+document.write(aCentaur);  
+
+// Output: "a horse with rider, as seen from a distance by a naive innocent."  
+
+        
+function send(name) {  
+    // Local variable 'name' is stored in the closure  
+    // for the inner function.  
+    return function () {  
+        sendHi(name);  
+    }  
+}  
+
+function sendHi(msg) {  
+    console.log('Hello ' + msg);  
+}  
+
+var func = send('Bill');  
+func();  
+// Output:  
+// Hello Bill  
+sendHi('Pete');  
+// Output:  
+// Hello Pete  
+func();  
+// Output:  
+// Hello Bill 
+    </script>
+    </body>
+</html>
