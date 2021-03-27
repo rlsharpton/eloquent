@@ -1,27 +1,26 @@
-const select = document.querySelector('select');
-const html = document.querySelector('html');
-const input = document.querySelector('input');
-input.addEventListener('input', debitBox);
-document.body.style.padding = '30px';
 
-function update(bgColor, textColor) {
-  html.style.backgroundColor = bgColor;
-  html.style.color = textColor;
+const btn = document.querySelector('button');
+const canvas = document.querySelector('canvas');
+
+let WIDTH = document.documentElement.clientWidth;
+let HEIGHT = document.documentElement.clientHeight;
+
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
+
+function pyramid() {
+  console.log('#');
 }
 
-function debitBox(debitColor, textValue) {
-  input.style.backgroundColor = debitColor;
-  input.style.color = textValue;
+function draw() {
+n = 0;
+for(i = 1; i < 8; i++){
+  do {
+    pyramid();
+    console.log(`I is: ${i} and N is: ${n}`);
+    n++;
+  } while(n < i)
+}
 }
 
-select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white') : update('white','black');
-}
-
-input.onchange = function() {
-  ( input.value === 'green' ) ? update('green', 'red') : update('red', 'green');
-}
-
-//input.addEventListener('input', function() {
-//  if ( input ) ? update('green', 'red') : update('red', 'green');
-//});
+btn.addEventListener('click', draw);
