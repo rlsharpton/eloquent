@@ -21,3 +21,25 @@ const power = (base, exponent) => {
   }
   return result;
 }
+
+function returnAnElement(array, index) {
+  return array[index];
+}
+
+const spellMeOut = (array) => {
+  for(i = 0; i < array.length; i++) {
+    let holdMe = [];
+    holdMe = array[i];
+    if(holdMe < array[(i + 1)]) {
+      console.log("bigger");
+    }
+    console.log(array[i]);
+  }
+}
+
+var scores = [98, 85, 91, 78, 82];
+var position = 3;
+var positionElement = returnAnElement(scores, position);
+console.log('positionElement:', positionElement);
+
+spellMeOut(scores);
